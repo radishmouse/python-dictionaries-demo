@@ -192,3 +192,8 @@ favorites.update(cat='Milla')
 
 # How do I remove value values from an existing dictionary?
 del favorites['ice cream']
+
+favorites['ice cream'] = ['Butter Pecan', 'Cookies and Cream']
+del favorites['ice cream'][1]
+
+favorites['cat'] = ''

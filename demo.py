@@ -69,7 +69,8 @@ places = {
     'US': {
         'Georgia': {
             'Atlanta': {
-                'work': 'DigitalCrafts'
+                'work': 'DigitalCrafts',
+                'cats': ['Oakley', 'Milla']
             },
             'Nashville': {
                 'lunch': 'Hattie B'
@@ -90,19 +91,94 @@ places = {
                 'lunch': 'The Reichstag'
             },
             'Munich': {
-                'snack': 'Hofbrauhaus'
+                'snack': 'Hofbräuhaus'
             }
         }
     }
 }
+
 
 ##### How do I access information in useful dictionaries?
 # How do I access nested information?
 # Use square brackets side by side (as you would with nested lists).
 places['US']['Georgia']['Atlanta']['work']
 
+# How do I access a list item in a nested dictionary?
+places['US']['Georgia']['Atlanta']['cats'][0]
+
+# How do I access an item in a dictionary in a list?
+movies = [
+    {
+        'title': 'Avengers: End Game',
+        'release date': '2019'
+    },
+    {
+        'title': 'Avengers: Infinity dollars',
+        'release date': '2018'
+    }    
+]
+
+movies[1]['release date']
+
+# How do I loop through lists of dictionaries?
+
+charges = [
+    {
+        'vendor': 'Kula',
+        'amount': 6.36
+    },
+    {
+        'vendor': 'Kula',
+        'amount': 9.11
+    },
+    {
+        'vendor': 'Barnes and Noble',
+        'amount': 16.49
+    },
+    {
+        'vendor': 'Kula',
+        'amount': 3.99
+    },
+    {
+        'vendor': 'Lloyds',
+        'amount': 50
+    },            
+]
 
 # How do I loop through information in a dictionary?
+# A for loop with a dictionary
+# assigns the key string to the loop variable.
+for city in ga_cities:
+    print(ga_cities[city])
+
+# Note: if you put quotes around `city`,
+# python thinks you literally mean the key "city"
+for city in ga_cities:
+    print(ga_cities['city'])
+
+
+
+
+
+# How do I find the highest charge?
+highest = charges[0]
+for charge in charges:
+    if charge['amount'] > highest['amount']:
+        highest = charge
+
+# version #2
+high_vendor = charges[0]['vendor']
+highest = charges[0]['amount']
+for charge in charges:
+    if charge['amount'] > highest:
+        highest = charge['amount']
+        high_vendor = charge['vendor']
+
+
+
+
+
+
 
 ##### How do I modify a dictionary?
 # How do I store new values to an existing dictionary?

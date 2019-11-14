@@ -178,8 +178,17 @@ for charge in charges:
 
 
 
-
+favorites = {}
 
 ##### How do I modify a dictionary?
 # How do I store new values to an existing dictionary?
+favorites['cat'] = 'Oakley'
+favorites['ice cream'] = 'Butter Pecan'
+favorites.update(bootcamp='DigitalCrafts')
+
+# How do I update a value in an existing dictionary?
+favorites['ice cream'] = 'Cookies and Cream'
+favorites.update(cat='Milla')
+
 # How do I remove value values from an existing dictionary?
+del favorites['ice cream']

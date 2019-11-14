@@ -73,7 +73,7 @@ places = {
             },
             'Nashville': {
                 'lunch': 'Hattie B'
-            }
+            },
             'Savannah': {
                 'coffee': 'That place that time'
             }
@@ -98,6 +98,10 @@ places = {
 
 ##### How do I access information in useful dictionaries?
 # How do I access nested information?
+# Use square brackets side by side (as you would with nested lists).
+places['US']['Georgia']['Atlanta']['work']
+
+
 # How do I loop through information in a dictionary?
 
 ##### How do I modify a dictionary?
